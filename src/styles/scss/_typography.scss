@@ -12,6 +12,7 @@
 .header--lg {
     font-size: rem-calc(72);
     font-weight: 600;
+    margin-bottom: rem-calc(37);
 }
 
 .header--md {
@@ -22,8 +23,18 @@
 .header--sm {
     font-size: rem-calc(19);
     font-weight: 600;
+    margin-bottom: rem-calc(54);
 }
 
 .header--strong {
     font-weight: 800;
+}
+
+[class*="paragraph"] {
+    color: $midnight;
+}
+
+.paragraph--md {
+    font-size: rem-calc(22);
+    line-height: 1.3;
 }

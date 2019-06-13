@@ -1,0 +1,17 @@
+@import "utilities";
+
+.ruler {
+    display: block;
+    width: 2px;
+    height: rem-calc(150);
+    background-color: $midnight;
+    margin-bottom: rem-calc(38);
+}
+
+.ruler.light {
+    background-color: #FFFFFF;
+}
+
+.ruler.thin {
+    width: 1px;
+}

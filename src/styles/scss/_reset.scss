@@ -48,6 +48,13 @@ table {
 }
 
 /* ADDITIONS TO RESET */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 button {
     -webkit-appearance: none;
     -moz-appearance: none;

@@ -1,0 +1,41 @@
+@import "utilities";
+
+.about {
+    background-color: #FFFFFF;
+}
+
+.about__content {
+    @include layoutMax;
+    margin: 0 auto;
+}
+
+.about__details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem-calc(98);
+    padding-bottom: rem-calc(138);
+}
+
+.about__detail {
+    display: flex;
+    flex: 1 1 0;
+
+    :first-child {
+        flex: 0 0 0;
+        margin-right: rem-calc(30);
+    }
+
+    :last-child {
+        flex: 1 1 0;
+    }
+
+     & + & {
+         margin-left: rem-calc(38);
+     }
+
+    img {
+        width: rem-calc(100);
+        height: rem-calc(100);
+        object-fit: contain;
+    }
+}
