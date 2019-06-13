@@ -1,0 +1,43 @@
+@import "utilities";
+
+.nav {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    left: 50%;
+    transform: translateX(-50%);
+    @include layoutMax;
+    padding-top: rem-calc(52);
+}
+
+.nav_items {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: rem-calc(20);
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.nav__item {
+    display: inline-block;
+    list-style-type: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+
+    &:not(:first-of-type)::before {
+        content: '|';
+        display: inline-block;
+        margin: 0 rem-calc(10);
+    }
+
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: all 0.1s ease-in;
+    }
+
+    a:hover {
+        color: $sun;
+        text-decoration: underline;
+    }
+}

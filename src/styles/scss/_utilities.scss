@@ -1,5 +1,23 @@
 // Global Colors
-
 $midnight: #061C37;
 $sun: #F9AC48;
+$sun-darkened: #da9132;
 $stone: #BBBBBB;
+
+// Typography
+$base-font: 16;
+
+// Layout
+$layout-max-width: 1285;
+
+// Functions
+@function rem-calc($pixel) {
+    @return ($pixel/$base-font) * 1rem;
+}
+
+
+// Mixins
+@mixin layoutMax {
+    width: 100%;
+    max-width: rem-calc($layout-max-width);
+}

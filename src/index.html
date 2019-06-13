@@ -2,27 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Codesmith | OSLabs</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#submit">Submit a Project</a></li>
+<nav class="nav">
+    <ul class="nav_items">
+        <li class="nav__item"><a href="#about">About</a></li>
+        <li class="nav__item"><a href="#projects">Projects</a></li>
+        <li class="nav__item"><a href="#sponsors">Sponsors</a></li>
+        <li class="nav__item"><a href="#submit">Submit a Project</a></li>
     </ul>
 </nav>
 <main>
     <section class="hero">
+        <div class="hero__bg">
+            <img src="images/hero-nodes.png" alt="">
+        </div>
         <h1>
-            <span class="hero__title">OS Labs</span>
-            <span class="hero__subtitle">Partnering around Open Source</span>
+            <img class="hero__logo" src="images/oslabs-white.png" alt="OSLabs">
+            <span class="header--lg light">Partnering around Open Source</span>
         </h1>
-        <button>Submit Project</button>
+        <button class="hero__cta btn--primary">Submit Project</button>
+        <img class="hero__arrow" src="images/arrow-down.svg" alt="Scroll down to view more" aria-hidden="true">
     </section>
     <section>
         <h2>About OS Labs</h2>

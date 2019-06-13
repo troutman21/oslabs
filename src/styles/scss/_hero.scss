@@ -1,0 +1,61 @@
+@import "utilities";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: max-content;
+    background-color: $midnight;
+    text-align: center;
+    overflow: hidden;
+
+    h1 {
+        position: relative;
+    }
+}
+
+.hero__logo {
+    width: rem-calc(309);
+    height: auto;
+    margin-top: rem-calc(25);
+    margin-bottom: rem-calc(158);
+}
+
+.hero__cta {
+    position: relative;
+    margin-top: rem-calc(168);
+}
+
+.hero__arrow {
+    position: absolute;
+    bottom: 2vh;
+    left: 50%;
+    width: rem-calc(31);
+    height: auto;
+    transform: translateX(-50%);
+    animation: float 1s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    from {
+        transform: translateX(-50%) translateY(0);
+    }
+    from {
+        transform: translateX(-50%) translateY(rem-calc(-10));
+    }
+}
+
+.hero__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+    }
+}

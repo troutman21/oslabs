@@ -1,0 +1,29 @@
+@import "utilities";
+
+[class*="header"] {
+    display: block;
+    color: $midnight;
+}
+
+[class*="header"].light {
+    color: #FFFFFF;
+}
+
+.header--lg {
+    font-size: rem-calc(72);
+    font-weight: 600;
+}
+
+.header--md {
+    font-size: rem-calc(36);
+    font-weight: 500;
+}
+
+.header--sm {
+    font-size: rem-calc(19);
+    font-weight: 600;
+}
+
+.header--strong {
+    font-weight: 800;
+}
