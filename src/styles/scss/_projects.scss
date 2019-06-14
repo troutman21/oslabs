@@ -1,0 +1,131 @@
+@import "utilities";
+
+.projects {
+    background-color: #FFFFFF;
+    padding-bottom: rem-calc(188);
+}
+
+.project__content {
+    @include layoutMax;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+
+.projects__header {
+    flex: 1 0 100%;
+}
+
+
+.projects__list {
+    max-width: rem-calc(1025);
+    margin: rem-calc(84) auto 0;
+    padding: rem-calc(72);
+    box-shadow: 0 0 rem-calc(18) rem-calc(7) rgba(0, 0, 0, 0.03);
+    text-align: left;
+}
+
+.projects__item {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+
+    & + & {
+        margin-top: rem-calc(73);
+        padding-top: rem-calc(73);
+    }
+
+    & + &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, #ffffff 0%,#ffffff 20%,#e6e6e6 20%,#e6e6e6 80%,#ffffff 80%,#ffffff 80%,#ffffff 100%);
+    }
+}
+
+.projects__preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__thumbnail {
+    transition: all 0.1s ease-in;
+    &:hover {
+        box-shadow: 0 0 0 rem-calc(4) rgba(0,0,0,0.05);
+    }
+
+    img {
+        display: block;
+        max-width: rem-calc(412);
+    }
+}
+
+.projects__details {
+    margin-left: rem-calc(30);
+    padding-top: rem-calc(10);
+    font-size: rem-calc(21);
+    color: #202020;
+    line-height: 1.5;
+}
+
+.projects__title {
+    font-size: rem-calc(19);
+    font-weight: 700;
+    letter-spacing: rem-calc(1);
+    text-transform: uppercase;
+}
+
+.projects__subtitle {
+    font-weight: 600;
+    color: #050a40;
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(20);
+}
+
+.projects__stars {
+    display: flex;
+    align-items: center;
+    width: rem-calc(60);
+    justify-content: space-between;
+    color: #9ea2a6;
+    font-weight: 700;
+    margin-right: rem-calc(18);
+
+    img {
+        width: rem-calc(22);
+    }
+}
+
+.projects__stats {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: rem-calc(18);
+}
+
+.projects__cta {
+    border-radius: 50%;
+    border: 2px solid $sun;
+    padding: rem-calc(3) rem-calc(4) rem-calc(2);
+    transition: all 0.1s ease-in;
+
+    img {
+        max-width: rem-calc(13);
+        transition: all 0.1s ease-in;
+    }
+
+    &:hover {
+        border-color: $sun-darkened;
+        img {
+            transform: scale(0.7);
+        }
+    }
+}

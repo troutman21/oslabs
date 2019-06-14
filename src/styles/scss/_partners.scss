@@ -1,0 +1,101 @@
+@import "utilities";
+
+.partners {
+    background-color: $midnight;
+    padding-bottom: rem-calc(156);
+}
+
+.partners__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include layoutMax;
+    margin: 0 auto;
+}
+
+.partners__header {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+.partners__logos {
+    display: flex;
+    margin: rem-calc(10) auto 0;
+    align-items: center;
+    justify-content: space-between;
+    max-width: rem-calc(962);
+
+    li {
+        padding: 0 rem-calc(20);
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.partners__details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem-calc(70);
+    color: $sun;
+
+    img {
+        width: 100%;
+        max-width: rem-calc(173);
+    }
+
+    > p {
+        position: relative;
+        display: inline-block;
+        margin-right: rem-calc(40);
+        flex: 0 0 rem-calc(224);
+        line-height: 1.5;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: rem-calc(100);
+            height: rem-calc(100);
+            border-top: 1px solid $sun;
+            border-left: 1px solid $sun;
+            transform: translateX(rem-calc(-16)) translateY(rem-calc(-13));
+        }
+    }
+
+    span {
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    div {
+        border-left: 2px solid rgba(255,255,255, 0.1);
+        flex: 1 0 0;
+        text-align: center;
+        padding-top: rem-calc(40);
+    }
+
+    div:last-of-type {
+        flex: 0 0 auto;
+        padding-left: rem-calc(37);
+    }
+
+    div:last-of-type  p {
+        max-width: rem-calc(234);
+        display: block;
+        margin: 0 auto;
+    }
+
+    div:last-of-type  p:first-of-type {
+        margin-top: rem-calc(20);
+    }
+
+}
+
+.partners__details-title {
+    margin-top: rem-calc(20);
+    text-transform: uppercase;
+    font-size: rem-calc(21);
+    letter-spacing: rem-calc(0.2);
+}

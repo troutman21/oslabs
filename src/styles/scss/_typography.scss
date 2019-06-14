@@ -5,8 +5,14 @@
     color: $midnight;
 }
 
-[class*="header"].light {
+[class*="header"].light,
+[class*="paragraph"].light {
     color: #FFFFFF;
+}
+
+[class*="header"].secondary,
+[class*="paragraph"].secondary {
+    color: $stone;
 }
 
 .header--lg {
@@ -24,6 +30,7 @@
     font-size: rem-calc(19);
     font-weight: 600;
     margin-bottom: rem-calc(54);
+    text-transform: uppercase;
 }
 
 .header--strong {
