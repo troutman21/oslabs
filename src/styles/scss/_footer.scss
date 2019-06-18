@@ -1,0 +1,23 @@
+@import "_utilities.scss";
+
+footer {
+    padding-bottom: rem-calc(272);
+    background-color: $space;
+
+    p + p {
+        margin-top: rem-calc(30);
+    }
+
+    > div {
+        @include layoutMax;
+        margin: 0 auto;
+    }
+}
+
+.footer_contents {
+    display: flex;
+    align-items: center;
+    > :last-child {
+        margin-left: rem-calc(100);
+    }
+}
