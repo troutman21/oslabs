@@ -1,6 +1,7 @@
 @import "utilities";
 
 .hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,3 +60,28 @@
         height: 100%;
     }
 }
+
+
+// Responsive Styles
+
+.hero {
+    @media screen and (max-width: rem-calc(1072)) {
+        height: 80vh;
+        padding: rem-calc(20);
+    }
+}
+
+
+.hero__logo {
+    @media screen and (max-width: rem-calc(1072)) {
+        width: rem-calc(270);
+        margin-bottom: rem-calc(50);
+    }
+}
+
+.hero__cta {
+     @media screen and (max-width: rem-calc(1072)) {
+         margin-top: rem-calc(50);
+     }
+ }
+

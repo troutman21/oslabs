@@ -7,8 +7,10 @@
     justify-content: flex-end;
     left: 50%;
     transform: translateX(-50%);
-    @include layoutMax;
+    max-width: rem-calc($layout-max-width + 52);
+    width: 100%;
     padding-top: rem-calc(52);
+    padding-right: rem-calc(52);
 }
 
 .nav_items {
@@ -39,5 +41,23 @@
     a:hover {
         color: $sun;
         text-decoration: underline;
+    }
+}
+
+// RESPONSIVE TREATMENTS:
+
+.nav {
+    @media screen and (max-width: rem-calc(640)) {
+        justify-content: center;
+        left: initial;
+        transform: none;
+        padding-right: 0;
+    }
+}
+
+.nav_items {
+    @media screen and (max-width: rem-calc(640)) {
+        margin-left: initial;
+        text-align: center;
     }
 }

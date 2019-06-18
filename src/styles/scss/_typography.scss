@@ -19,6 +19,10 @@
     font-size: rem-calc(72);
     font-weight: 600;
     margin-bottom: rem-calc(37);
+
+    @media screen and (max-width: rem-calc(1072)) {
+        font-size: rem-calc(50);
+    }
 }
 
 .header--md {

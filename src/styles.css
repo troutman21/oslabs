@@ -79,6 +79,9 @@ body {
   font-size: 4.5rem;
   font-weight: 600;
   margin-bottom: 2.3125rem; }
+  @media screen and (max-width: 67rem) {
+    .header--lg {
+      font-size: 3.125rem; } }
 
 .header--md {
   font-size: 2.25rem;
@@ -105,7 +108,8 @@ body {
   text-transform: uppercase;
   border-radius: 0.25rem;
   transition: all 0.1s ease-in;
-  border: none; }
+  border: none;
+  text-decoration: none; }
   [class*="btn"]:focus, [class*="btn"]:hover {
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
     outline: none; }
@@ -145,9 +149,10 @@ body {
   justify-content: flex-end;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 83.5625rem;
   width: 100%;
-  max-width: 80.3125rem;
-  padding-top: 3.25rem; }
+  padding-top: 3.25rem;
+  padding-right: 3.25rem; }
 
 .nav_items {
   font-family: 'Source Sans Pro', sans-serif;
@@ -172,7 +177,20 @@ body {
     color: #F9AC48;
     text-decoration: underline; }
 
+@media screen and (max-width: 40rem) {
+  .nav {
+    justify-content: center;
+    left: initial;
+    transform: none;
+    padding-right: 0; } }
+
+@media screen and (max-width: 40rem) {
+  .nav_items {
+    margin-left: initial;
+    text-align: center; } }
+
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,6 +238,20 @@ body {
   .hero__bg img {
     height: 100%; }
 
+@media screen and (max-width: 67rem) {
+  .hero {
+    height: 80vh;
+    padding: 1.25rem; } }
+
+@media screen and (max-width: 67rem) {
+  .hero__logo {
+    width: 16.875rem;
+    margin-bottom: 3.125rem; } }
+
+@media screen and (max-width: 67rem) {
+  .hero__cta {
+    margin-top: 3.125rem; } }
+
 .about {
   background-color: #FFFFFF; }
 
@@ -250,7 +282,7 @@ body {
     object-fit: contain; }
 
 .partners {
-  background-color: #061C37;
+  background-color: #0f1c2f;
   padding-bottom: 9.75rem; }
 
 .partners__content {
@@ -424,3 +456,19 @@ body {
     border-color: #da9132; }
     .projects__cta:hover img {
       transform: scale(0.7); }
+
+footer {
+  padding-bottom: 17rem;
+  background-color: #0f1c2f; }
+  footer p + p {
+    margin-top: 1.875rem; }
+  footer > div {
+    width: 100%;
+    max-width: 80.3125rem;
+    margin: 0 auto; }
+
+.footer_contents {
+  display: flex;
+  align-items: center; }
+  .footer_contents > :last-child {
+    margin-left: 6.25rem; }
