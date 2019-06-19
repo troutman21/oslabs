@@ -2,6 +2,13 @@
 
 .about {
     background-color: #FFFFFF;
+    padding-left: rem-calc(40);
+    padding-right: rem-calc(40);
+
+    @media screen and (max-width: rem-calc(1072)) {
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30);
+    }
 }
 
 .about__content {
@@ -14,6 +21,12 @@
     justify-content: space-between;
     margin-top: rem-calc(98);
     padding-bottom: rem-calc(138);
+
+    @media screen and (max-width: rem-calc(1072)) {
+        flex-wrap: wrap;
+        margin-top: rem-calc(40);
+        padding-bottom: rem-calc(54);
+    }
 }
 
 .about__detail {
@@ -37,5 +50,18 @@
         width: rem-calc(100);
         height: rem-calc(100);
         object-fit: contain;
+    }
+
+    @media screen and (max-width: rem-calc(1072)) {
+        flex: 0 1 100%;
+
+        & + & {
+            margin-left: initial;
+            margin-top: rem-calc(40);
+        }
+
+        p {
+            max-width: rem-calc(550);
+        }
     }
 }

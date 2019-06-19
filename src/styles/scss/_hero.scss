@@ -85,3 +85,8 @@
      }
  }
 
+.hero__arrow {
+    @media screen and (max-width: rem-calc(1072)) {
+        display: none;
+    }
+}

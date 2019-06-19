@@ -28,6 +28,11 @@
 .header--md {
     font-size: rem-calc(36);
     font-weight: 500;
+
+    @media screen and (max-width: rem-calc(1072)) {
+        font-size: rem-calc(30);
+        max-width: rem-calc(700);
+    }
 }
 
 .header--sm {
@@ -35,6 +40,10 @@
     font-weight: 600;
     margin-bottom: rem-calc(54);
     text-transform: uppercase;
+    @media screen and (max-width: rem-calc(1072)) {
+        font-size: rem-calc(16);
+        margin-bottom: rem-calc(27);
+    }
 }
 
 .header--strong {
@@ -48,4 +57,5 @@
 .paragraph--md {
     font-size: rem-calc(22);
     line-height: 1.3;
+
 }

@@ -6,6 +6,10 @@
     height: rem-calc(150);
     background-color: $midnight;
     margin-bottom: rem-calc(38);
+
+    @media screen and (max-width: rem-calc(1072)) {
+        height: rem-calc(50);
+    }
 }
 
 .ruler.light {
@@ -15,3 +19,5 @@
 .ruler.thin {
     width: 1px;
 }
+
+

@@ -86,12 +86,20 @@ body {
 .header--md {
   font-size: 2.25rem;
   font-weight: 500; }
+  @media screen and (max-width: 67rem) {
+    .header--md {
+      font-size: 1.875rem;
+      max-width: 43.75rem; } }
 
 .header--sm {
   font-size: 1.1875rem;
   font-weight: 600;
   margin-bottom: 3.375rem;
   text-transform: uppercase; }
+  @media screen and (max-width: 67rem) {
+    .header--sm {
+      font-size: 1rem;
+      margin-bottom: 1.6875rem; } }
 
 .header--strong {
   font-weight: 800; }
@@ -135,6 +143,9 @@ body {
   height: 9.375rem;
   background-color: #061C37;
   margin-bottom: 2.375rem; }
+  @media screen and (max-width: 67rem) {
+    .ruler {
+      height: 3.125rem; } }
 
 .ruler.light {
   background-color: #FFFFFF; }
@@ -252,8 +263,18 @@ body {
   .hero__cta {
     margin-top: 3.125rem; } }
 
+@media screen and (max-width: 67rem) {
+  .hero__arrow {
+    display: none; } }
+
 .about {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem; }
+  @media screen and (max-width: 67rem) {
+    .about {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem; } }
 
 .about__content {
   width: 100%;
@@ -265,6 +286,11 @@ body {
   justify-content: space-between;
   margin-top: 6.125rem;
   padding-bottom: 8.625rem; }
+  @media screen and (max-width: 67rem) {
+    .about__details {
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+      padding-bottom: 3.375rem; } }
 
 .about__detail {
   display: flex;
@@ -280,6 +306,14 @@ body {
     width: 6.25rem;
     height: 6.25rem;
     object-fit: contain; }
+  @media screen and (max-width: 67rem) {
+    .about__detail {
+      flex: 0 1 100%; }
+      .about__detail + .about__detail {
+        margin-left: initial;
+        margin-top: 2.5rem; }
+      .about__detail p {
+        max-width: 34.375rem; } }
 
 .partners {
   background-color: #0f1c2f;
