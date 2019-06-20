@@ -2,7 +2,11 @@
 
 .partners {
     background-color: $space;
-    padding-bottom: rem-calc(156);
+    padding: 0 rem-calc(40) rem-calc(156) rem-calc(40);
+
+    @media screen and (max-width: rem-calc(1072)) {
+        padding: 0 rem-calc(40) rem-calc(58) rem-calc(40);
+    }
 }
 
 .partners__content {
@@ -98,4 +102,57 @@
     text-transform: uppercase;
     font-size: rem-calc(21);
     letter-spacing: rem-calc(0.2);
+}
+
+// Responsive
+.partners__details {
+    @media screen and (max-width: rem-calc(1072)) {
+        flex-wrap: wrap;
+
+        > :first-child {
+            flex: 1 0 100%;
+            margin-bottom: rem-calc(60);
+        }
+
+        > :nth-child(2) {
+            border: none;
+        }
+
+        img {
+            width: 80%;
+        }
+
+        > div {
+            padding-left: rem-calc(10);
+            padding-right: rem-calc(10);
+        }
+
+        > div:first-of-type {
+            padding-left: 0;
+        }
+
+        > div:last-of-type {
+            flex: 1 0 0;
+            padding-left: rem-calc(10);
+            padding-right: 0;
+        }
+    }
+
+    @media screen and (max-width: rem-calc(620)) {
+        > :first-child {
+            margin-bottom: rem-calc(20);
+        }
+
+        > div {
+            flex: 1 0 100%;
+            border-left: none;
+            border-top: 2px solid rgba(255,255,255, 0.1);
+            padding-top: rem-calc(20);
+            margin-top: rem-calc(20);
+
+            img {
+                width: 30%;
+            }
+        }
+    }
 }

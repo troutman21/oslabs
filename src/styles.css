@@ -317,7 +317,10 @@ body {
 
 .partners {
   background-color: #0f1c2f;
-  padding-bottom: 9.75rem; }
+  padding: 0 2.5rem 9.75rem 2.5rem; }
+  @media screen and (max-width: 67rem) {
+    .partners {
+      padding: 0 2.5rem 3.625rem 2.5rem; } }
 
 .partners__content {
   display: flex;
@@ -388,6 +391,38 @@ body {
   text-transform: uppercase;
   font-size: 1.3125rem;
   letter-spacing: 0.0125rem; }
+
+@media screen and (max-width: 67rem) {
+  .partners__details {
+    flex-wrap: wrap; }
+    .partners__details > :first-child {
+      flex: 1 0 100%;
+      margin-bottom: 3.75rem; }
+    .partners__details > :nth-child(2) {
+      border: none; }
+    .partners__details img {
+      width: 80%; }
+    .partners__details > div {
+      padding-left: 0.625rem;
+      padding-right: 0.625rem; }
+    .partners__details > div:first-of-type {
+      padding-left: 0; }
+    .partners__details > div:last-of-type {
+      flex: 1 0 0;
+      padding-left: 0.625rem;
+      padding-right: 0; } }
+
+@media screen and (max-width: 38.75rem) {
+  .partners__details > :first-child {
+    margin-bottom: 1.25rem; }
+  .partners__details > div {
+    flex: 1 0 100%;
+    border-left: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.25rem;
+    margin-top: 1.25rem; }
+    .partners__details > div img {
+      width: 30%; } }
 
 .projects {
   background-color: #FFFFFF;
