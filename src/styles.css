@@ -526,6 +526,37 @@ body {
     .projects__cta:hover img {
       transform: scale(0.7); }
 
+@media screen and (max-width: 67rem) {
+  .projects {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem; } }
+
+@media screen and (max-width: 67rem) {
+  .projects__list {
+    padding: 0 0 1.875rem 0;
+    margin: 3.75rem auto 0; } }
+
+@media screen and (max-width: 67rem) {
+  .projects__item {
+    flex-direction: column-reverse; }
+    .projects__item + .projects__item {
+      margin-top: 1.875rem;
+      padding-top: 1.875rem; } }
+
+@media screen and (max-width: 64.1875rem) {
+  .projects__thumbnail img {
+    width: 100%;
+    max-width: none; } }
+
+@media screen and (max-width: 64.1875rem) {
+  .projects__details {
+    margin-top: -2.25rem;
+    padding-right: 1.875rem; } }
+
+@media screen and (max-width: 64.1875rem) {
+  .projects__stats {
+    padding-right: 1.875rem; } }
+
 footer {
   padding-bottom: 17rem;
   background-color: #0f1c2f; }

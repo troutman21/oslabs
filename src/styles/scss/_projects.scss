@@ -129,3 +129,52 @@
         }
     }
 }
+
+
+// Responsive
+.projects {
+    @media screen and (max-width: rem-calc(1072)) {
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30);
+    }
+}
+
+.projects__list {
+    @media screen and (max-width: rem-calc(1072)) {
+        padding: 0 0 rem-calc(30) 0;
+        margin: rem-calc(60) auto 0;
+    }
+}
+
+.projects__item {
+    @media screen and (max-width: rem-calc(1072)) {
+        flex-direction: column-reverse;
+
+        & + & {
+            margin-top: rem-calc(30);
+            padding-top: rem-calc(30);
+        }
+    }
+}
+
+.projects__thumbnail {
+    @media screen and (max-width: rem-calc(1027)) {
+        img {
+            width: 100%;
+            max-width: none;
+        }
+    }
+}
+
+.projects__details {
+    @media screen and (max-width: rem-calc(1027)) {
+        margin-top: rem-calc(-36);
+        padding-right: rem-calc(30);
+    }
+}
+
+.projects__stats {
+    @media screen and (max-width: rem-calc(1027)) {
+        padding-right: rem-calc(30);
+    }
+}
