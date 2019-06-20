@@ -529,7 +529,8 @@ body {
 @media screen and (max-width: 67rem) {
   .projects {
     padding-left: 1.875rem;
-    padding-right: 1.875rem; } }
+    padding-right: 1.875rem;
+    padding-bottom: 3.625rem; } }
 
 @media screen and (max-width: 67rem) {
   .projects__list {
@@ -566,9 +567,21 @@ footer {
     width: 100%;
     max-width: 80.3125rem;
     margin: 0 auto; }
+  @media screen and (max-width: 67rem) {
+    footer {
+      padding-left: 1.875rem;
+      padding-right: 1.875rem;
+      padding-bottom: 7.25rem; } }
 
 .footer_contents {
   display: flex;
   align-items: center; }
   .footer_contents > :last-child {
     margin-left: 6.25rem; }
+  @media screen and (max-width: 67rem) {
+    .footer_contents {
+      flex-direction: column; }
+      .footer_contents > :first-child {
+        margin-bottom: 1.875rem; }
+      .footer_contents > :last-child {
+        margin-left: 0; } }

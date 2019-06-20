@@ -12,6 +12,12 @@ footer {
         @include layoutMax;
         margin: 0 auto;
     }
+
+    @media screen and (max-width: rem-calc(1072)) {
+        padding-left: rem-calc(30);
+        padding-right: rem-calc(30);
+        padding-bottom: rem-calc(116);
+    }
 }
 
 .footer_contents {
@@ -19,5 +25,15 @@ footer {
     align-items: center;
     > :last-child {
         margin-left: rem-calc(100);
+    }
+
+    @media screen and (max-width: rem-calc(1072)) {
+        flex-direction: column;
+        > :first-child {
+            margin-bottom: rem-calc(30);
+        }
+        > :last-child {
+            margin-left: 0;
+        }
     }
 }
