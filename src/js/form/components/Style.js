@@ -16,6 +16,13 @@ function style(mountNode) {
         grid-row-gap: 1.75rem;
       }
       
+      @media screen and (max-width: 67rem) {
+        #${this.mountNodeId} {
+          display: block;
+          padding: 1.25rem 1.25rem 5rem;
+        }
+      }
+      
       #${this.mountNodeId} legend {
           position: absolute;
           opacity: 0;
@@ -31,6 +38,12 @@ function style(mountNode) {
            flex-direction: column;
        }
        
+       @media screen and (max-width: 67rem) {
+        .form_input + .form_input,
+        .form_input + .form_message {
+          margin-top: 1.875rem;
+        }
+      }
        
        #${this.mountNodeId} .form_input > label,
        #${this.mountNodeId} .form_message > label {
@@ -70,6 +83,13 @@ function style(mountNode) {
             transform: translateX(-50%);
             font-weight: 600;
             padding: 0.6875rem 0.625rem 0.75rem;
+            
+        }
+        
+        #${this.mountNodeId} .form_btn:hover:disabled,
+        #${this.mountNodeId} .form_btn:focus:disabled {
+          pointer-events: none;
+          outline: none;
         }
     `;
 

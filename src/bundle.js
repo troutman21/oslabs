@@ -2,7 +2,6 @@ function style(mountNode) {
   this.styleTag = document.createElement('style');
   this.mountNodeId = mountNode.id;
 
-
   this.styles = `
       #${this.mountNodeId} {
         position: relative;
@@ -15,6 +14,13 @@ function style(mountNode) {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 3rem;
         grid-row-gap: 1.75rem;
+      }
+      
+      @media screen and (max-width: 67rem) {
+        #${this.mountNodeId} {
+          display: block;
+          padding: 1.25rem 1.25rem 5rem;
+        }
       }
       
       #${this.mountNodeId} legend {
@@ -32,6 +38,12 @@ function style(mountNode) {
            flex-direction: column;
        }
        
+       @media screen and (max-width: 67rem) {
+        .form_input + .form_input,
+        .form_input + .form_message {
+          margin-top: 1.875rem;
+        }
+      }
        
        #${this.mountNodeId} .form_input > label,
        #${this.mountNodeId} .form_message > label {
@@ -71,6 +83,13 @@ function style(mountNode) {
             transform: translateX(-50%);
             font-weight: 600;
             padding: 0.6875rem 0.625rem 0.75rem;
+            
+        }
+        
+        #${this.mountNodeId} .form_btn:hover:disabled,
+        #${this.mountNodeId} .form_btn:focus:disabled {
+          pointer-events: none;
+          outline: none;
         }
     `;
 
@@ -83,11 +102,21 @@ function style(mountNode) {
 
 class Form {
   constructor(form, onSubmit) {
-    console.log('formNode', form);
     this.fields = [];
+    this.submitBtn = form.getElementsByTagName('button')[0];
     this.onSubmit = onSubmit;
 
-    form.action = 'POST';
+
+    const formInputContainers = form.getElementsByTagName('div');
+    Array.prototype.forEach.call(formInputContainers, input => {
+      if(input.getElementsByTagName('textarea').length > 0) {
+        input.classList.add('form_message');
+      } else {
+        input.classList.add('form_input');
+      }
+      this.fields.push(input);
+    });
+
     form.addEventListener('submit', e => {
       e.preventDefault();
       this.submit(e, this.fields, this.onSubmit);
@@ -97,7 +126,11 @@ class Form {
   }
 
   submit(e, fields, handleSubmit) {
-    handleSubmit(e);
+    this.submitBtn.disabled = true;
+    this.submitBtn.innerText = 'Form Submitted, Thanks!';
+    this.submitBtn.style.opacity = '0.5';
+    this.submitBtn.style.outline = 'none';
+    handleSubmit(e, fields);
   }
 
 
@@ -105,8 +138,25 @@ class Form {
 
 }
 
-const Form$1 = new Form(document.querySelector('#industryRequest'), e => {
-  console.log('Form Fam');
-});
+const Form$1 = new Form(document.querySelector('#industryRequest'), (e, fields) => {
+  console.log('Form Fam', e);
+  console.log('Form Fam', fields);
 
-console.log('hello');
+  let formData = {
+    subject: 'OsLabs Contact Submission',
+  };
+
+  let mailToLink = `mailto:?subject=${formData.subject}&body=${fields.reduce((acc, input)=> {
+    const subject = input.getElementsByTagName('label')[0].textContent;
+    const value = !input.getElementsByTagName('textarea').length > 0 ? 
+      input.getElementsByTagName('input')[0].value 
+      : input.getElementsByTagName('textarea')[0].value;
+
+    acc += `%0A${subject}:%20${value}%0A`;
+
+    return acc;
+  }, '')}`;
+
+  console.log(mailToLink);
+  window.location.href = mailToLink;
+});

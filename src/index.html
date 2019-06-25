@@ -32,7 +32,7 @@
         <img class="hero__arrow" src="images/arrow-down.svg" alt="Scroll down to view more"
              aria-hidden="true">
     </section>
-    <section class="about">
+    <section id="about" class="about">
         <div class="about__content">
             <span class="ruler"></span>
             <h2 class="header--sm">About OS Labs</h2>
@@ -68,7 +68,7 @@
             </div>
         </div>
     </section>
-    <section class="partners">
+    <section id="sponsors" class="partners">
         <div class="partners__content">
             <span class="ruler light"></span>
             <h2 class="partners__header">
@@ -104,7 +104,7 @@
             </div>
         </div>
     </section>
-    <section class="projects">
+    <section id="projects" class="projects">
         <div class="project__content">
             <span class="ruler"></span>
             <div class="projects__header">
@@ -120,21 +120,41 @@
             <ul class="projects__list">
                 <li class="projects__item">
                     <div class="projects__details">
-                        <h3 class="projects__title">React Proto</h3>
-                        <p class="projects__subtitle">React-Proto is a React application prototyping tool for developers and
-                            designers</p>
-                        <p>React Proto is a React architecture mapping tool that gives developers and
-                            designers the ability to create clean, organized, and intentional code from
-                            the beginning of the process.</p>
+                        <h3 class="projects__title">Swell</h3>
+                        <p class="projects__subtitle">A streaming-focused API development tool</p>
+                        <p>Swell is a Streaming API development tool that enables developers to test API endpoints served over modern networking technologies including Server-Sent Events (SSE), WebSocket, and HTTP2.</p>
                     </div>
                     <div class="projects__preview">
-                        <a class="projects__thumbnail" href="#">
-                            <img src="images/project-react-proto.jpg" alt="Thumbnail of React Proto Interface">
+                        <a class="projects__thumbnail" href="https://github.com/open-source-labs/Swell">
+                            <img src="images/project-swell.jpg" alt="Thumbnail of React Proto Interface">
                         </a>
                         <div class="projects__stats">
                             <div class="projects__stars">
                                 <img src="images/icon-star.png" alt="">
-                                <span>2.1k</span>
+                                <span>100+</span>
+                            </div>
+                            <a href="#"
+                               class="projects__cta"
+                               title="Leave site and see React Proto project">
+                                <img src="images/icon-arrow.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="projects__item">
+                    <div class="projects__details">
+                        <h3 class="projects__title">ReacType</h3>
+                        <p class="projects__subtitle">Prototyping Tool for exporting React/Typescript Applications</p>
+                        <p>ReacType is a visual prototyping tool for developers employing React component architecture alongside the comprehensive type checking of TypeScript. In other words, you can draw prototypes and export React / Typescript code!</p>
+                    </div>
+                    <div class="projects__preview">
+                        <a class="projects__thumbnail" href="#">
+                            <img src="images/project-reactype.jpeg" alt="Thumbnail of React Proto Interface">
+                        </a>
+                        <div class="projects__stats">
+                            <div class="projects__stars">
+                                <img src="images/icon-star.png" alt="">
+                                <span>615</span>
                             </div>
                             <a href="#"
                                class="projects__cta"
@@ -169,29 +189,6 @@
                         </div>
                     </div>
                 </li>
-                <li class="projects__item">
-                    <div class="projects__details">
-                        <h3 class="projects__title">Swell</h3>
-                        <p class="projects__subtitle">A streaming-focused API development tool</p>
-                        <p>Swell is a Streaming API development tool that enables developers to test API endpoints served over modern networking technologies including Server-Sent Events (SSE), WebSocket, and HTTP2.</p>
-                    </div>
-                    <div class="projects__preview">
-                        <a class="projects__thumbnail" href="https://github.com/open-source-labs/Swell">
-                            <img src="images/project-swell.jpg" alt="Thumbnail of React Proto Interface">
-                        </a>
-                        <div class="projects__stats">
-                            <div class="projects__stars">
-                                <img src="images/icon-star.png" alt="">
-                                <span>100+</span>
-                            </div>
-                            <a href="#"
-                               class="projects__cta"
-                               title="Leave site and see React Proto project">
-                                <img src="images/icon-arrow.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </li>
             </ul>
         </div>
     </section>
@@ -206,7 +203,7 @@
                     <span class="header--sm light">About OS Labs</span>
                     <span class="header--lg header--strong light">Submit your Request</span>
                 </h2>
-                <p class="paragraph--md secondary">At OSLabs we like to keep open communicaiton with industry leaders. We believe this
+                <p class="paragraph--md secondary">At OSLabs we like to keep open communication with industry leaders. We believe this
                     is the best way to stay up to date on cutting edge technology and where
                     technology/tooling has room for improvement.</p>
                 <p class="paragraph--md secondary">If you have ideas on how this can technology/tooling can be improved please let us
@@ -214,25 +211,25 @@
             </div>
             <form id="industryRequest">
                 <legend>Get In Touch</legend>
-                <div class="form_input">
-                    <label for="name">Your name</label>
-                    <input type="text" id="name">
+                <div>
+                    <label for="name">Your name*</label>
+                    <input type="text" id="name" required>
                 </div>
-                <div class="form_input">
-                    <label for="email">Your email</label>
-                    <input type="email" id="email">
+                <div>
+                    <label for="email">Your email*</label>
+                    <input type="email" id="email" required>
                 </div>
-                <div class="form_input">
-                    <label for="company">Your company</label>
-                    <input type="text" id="company">
+                <div>
+                    <label for="company">Your company*</label>
+                    <input type="text" id="company" required>
                 </div>
-                <div class="form_input">
-                    <label for="subject">Your subject</label>
-                    <input type="text" id="subject">
+                <div>
+                    <label for="subject">Your subject*</label>
+                    <input type="text" id="subject" required>
                 </div>
-                <div class="form_message">
-                    <label for="message">Your Your message</label>
-                    <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                <div>
+                    <label for="message">Your message*</label>
+                    <textarea name="message" id="message" cols="30" rows="5" required></textarea>
                 </div>
                 <button class="form_btn">Get in touch</button>
             </form>

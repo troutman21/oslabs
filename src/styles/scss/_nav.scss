@@ -53,6 +53,10 @@
         transform: none;
         padding-right: 0;
     }
+
+    @media screen and (max-width: rem-calc(450)) {
+        display: none;
+    }
 }
 
 .nav_items {

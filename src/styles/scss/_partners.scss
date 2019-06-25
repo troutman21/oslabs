@@ -138,6 +138,18 @@
         }
     }
 
+    @media screen and (max-width: rem-calc(1200)) {
+        //background-color: gold;
+        div {
+            padding-left: rem-calc(15);
+            padding-right: rem-calc(15);
+        }
+
+        div:last-of-type {
+            flex: 1 0 0;
+        }
+    }
+
     @media screen and (max-width: rem-calc(620)) {
         > :first-child {
             margin-bottom: rem-calc(20);
@@ -153,6 +165,25 @@
             img {
                 width: 30%;
             }
+        }
+    }
+}
+
+
+.partners__logos {
+    @media screen and (max-width: rem-calc(1072)) {
+        max-width: 70vw;
+    }
+
+    @media screen and (max-width: rem-calc(620)) {
+        max-width: 90vw;
+    }
+
+    @media screen and (max-width: rem-calc(420)) {
+        max-width: 100vw;
+
+        li {
+            padding: 0 rem-calc(5);
         }
     }
 }
