@@ -8,7 +8,7 @@ const Form = new form(document.querySelector('#industryRequest'), (e, fields) =>
     subject: 'OsLabs Contact Submission',
   };
 
-  let mailToLink = `mailto:?subject=${formData.subject}&body=${fields.reduce((acc, input)=> {
+  let mailToLink = `mailto:phillip@codesmith.io?subject=${formData.subject}&body=${fields.reduce((acc, input)=> {
     const subject = input.getElementsByTagName('label')[0].textContent;
     const value = !input.getElementsByTagName('textarea').length > 0 ? 
       input.getElementsByTagName('input')[0].value 

@@ -589,7 +589,7 @@ body {
   .projects__item {
     flex-direction: column-reverse; } }
 
-@media screen and (max-width: 64.1875rem) {
+@media screen and (max-width: 67rem) {
   .projects__thumbnail img {
     width: 100%;
     max-width: none; } }
