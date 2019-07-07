@@ -1,9 +1,7 @@
 import form from './form/index';
+import drawCanvas from './hero-bg';
 
 const Form = new form(document.querySelector('#industryRequest'), (e, fields) => {
-  console.log('Form Fam', e);
-  console.log('Form Fam', fields);
-
   let formData = {
     subject: 'OsLabs Contact Submission',
   };
@@ -19,6 +17,7 @@ const Form = new form(document.querySelector('#industryRequest'), (e, fields) =>
     return acc;
   }, '')}`;
 
-  console.log(mailToLink);
   window.location.href = mailToLink;
 });
+
+drawCanvas();
