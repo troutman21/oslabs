@@ -224,7 +224,7 @@ body {
   justify-content: center;
   height: 100vh;
   min-height: max-content;
-  background-color: #061C37;
+  background-color: #000000;
   text-align: center;
   overflow: hidden; }
   .hero h1 {
@@ -264,6 +264,17 @@ body {
   overflow: hidden; }
   .hero__bg img {
     height: 100%; }
+  .hero__bg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #2493e2;
+    opacity: 0.2; }
 
 @media screen and (max-width: 67rem) {
   .hero {

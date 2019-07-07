@@ -8,7 +8,7 @@
     justify-content: center;
     height: 100vh;
     min-height: max-content;
-    background-color: $midnight;
+    background-color: #000000;
     text-align: center;
     overflow: hidden;
 
@@ -58,6 +58,19 @@
 
     img {
         height: 100%;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #2493e2;
+        opacity: 0.2;
     }
 }
 
