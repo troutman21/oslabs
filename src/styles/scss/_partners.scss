@@ -2,6 +2,10 @@
 
 .partners {
     background-color: $space;
+    background-image: url('images/partners_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
     padding: 0 rem-calc(40) rem-calc(156) rem-calc(40);
 
     @media screen and (max-width: rem-calc(1072)) {

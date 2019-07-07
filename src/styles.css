@@ -344,6 +344,10 @@ body {
 
 .partners {
   background-color: #0f1c2f;
+  background-image: url("images/partners_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
   padding: 0 2.5rem 9.75rem 2.5rem; }
   @media screen and (max-width: 67rem) {
     .partners {
@@ -637,7 +641,11 @@ footer {
   padding-bottom: 17rem;
   padding-left: 1.875rem;
   padding-right: 1.875rem;
-  background-color: #0f1c2f; }
+  background-color: #0f1c2f;
+  background-image: url("images/footer_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100%; }
   footer p + p {
     margin-top: 1.875rem; }
   footer > div {
