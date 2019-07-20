@@ -1,241 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <title>Codesmith | OSLabs</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i&display=swap"
-          rel="stylesheet">
+    <title>OSLabs</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<nav class="nav">
-    <ul class="nav_items">
-        <li class="nav__item"><a href="#about">About</a></li>
-        <li class="nav__item"><a href="#projects">Projects</a></li>
-        <li class="nav__item"><a href="#sponsors">Sponsors</a></li>
-        <li class="nav__item"><a href="#submit">Submit Project</a></li>
-    </ul>
-</nav>
-<main>
-    <section class="hero">
-        <div class="hero__bg">
-            <canvas height="100%" width="100%" id="bg"></canvas>
-        </div>
-        <h1>
-            <img class="hero__logo" src="images/oslabs-white.png" alt="OSLabs">
-            <span class="header--lg light">Partnering around Open Source</span>
-        </h1>
-        <a href="#submit" class="hero__cta btn--primary">Submit Project</a>
-        <img class="hero__arrow" src="images/arrow-down.svg" alt="Scroll down to view more"
-             aria-hidden="true">
-    </section>
-    <section id="about" class="about">
-        <div class="about__content">
-            <span class="ruler"></span>
-            <h2 class="header--sm">About OS Labs</h2>
-            <h3 class="header--lg header--strong">Why Open Source Matters</h3>
-            <p class="header--md">
-                Open Source Labs (OSLabs) is a selective community of dedicated engineers with the
-                shared mission of driving creative technological through open source.
-            </p>
-            <div class="about__details">
-                <div class="about__detail">
-                    <img src="images/software-illustration.png"
-                         alt="Illustration representing open source software">
-                    <p class="paragraph--md">
-                        Open source software (OSS) is said by many to be one of the primary staples
-                        in the
-                        infrastructure of modern technology. it is what helps drive innocation,
-                        transparency, and collaboration between developers and the users of a
-                        project.
-                        Nearly all software today relies on free, public code, written and
-                        maintained by
-                        communities of developers.
-                    </p>
-                </div>
-                <div class="about__detail">
-                    <img src="images/contributors-illustration.png"
-                         alt="Illustration representing open source contributors">
-                    <p class="paragraph--md">Open source projects are great for those who want to
-                        improve their coding skills
-                        while at the same time contributing to project in a meaningful way that is
-                        used by
-                        many others.</p>
-                </div>
+    <nav class="nav">
+        <ul class="nav_items">
+            <li class="nav__item"><a href="#about">About</a></li>
+            <li class="nav__item"><a href="#projects">Projects</a></li>
+            <li class="nav__item"><a href="#sponsors">Sponsors</a></li>
+            <li class="nav__item"><a href="#submit">Submit Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero__bg">
+                <canvas height="100%" width="100%" id="bg"></canvas>
             </div>
-        </div>
-    </section>
-    <section id="sponsors" class="partners">
-        <div class="partners__content">
-            <span class="ruler light"></span>
-            <h2 class="partners__header">
-                <span class="header--sm light">Partnerships</span>
-                <span class="header--lg header--strong light">Partners and Sponsors</span>
-            </h2>
-            <ul class="partners__logos">
-                <li><img src="images/inrhythm-logo.png" alt="Partner: InRhythm Logo"></li>
-                <li><img src="images/ripplematch-logo.png" alt="Partner: Ripplematch Logo">
-                </li>
-                <li><img src="images/codesmith-logo.png" alt="Partner: Codesmith Logo">
-                </li>
-
-            </ul>
-            <div class="partners__details">
-                <p class="paragraph--md secondary">Our partners are leaders in their industry. They contribute to OSLabs in a  multitude of ways including engineering time and the spearheading of cutting edge technologies.
+            <h1>
+                <img class="hero__logo" src="images/oslabs-white.png" alt="OSLabs">
+                <span class="header--lg light">Partnering around Open Source</span>
+            </h1>
+            <a href="#submit" class="hero__cta btn--primary">Submit Project</a>
+            <img class="hero__arrow" src="images/arrow-down.svg" alt="Scroll down to view more" aria-hidden="true">
+        </section>
+        <section id="about" class="about">
+            <div class="about__content">
+                <span class="ruler"></span>
+                <h2 class="header--sm">About OS Labs</h2>
+                <h3 class="header--lg header--strong">Why Open Source Matters</h3>
+                <p class="header--md">
+                    Open Source Labs (OSLabs) is a selective community of dedicated engineers with the
+                    shared mission of driving creative technological through open source.
                 </p>
-                <div>
-                    <img src="images/luis-capelo.png" alt="Image of Luis Capelo">
-                    <p class="partners__details-title">Luis Capelo</p>
-                    <p class="paragraph--md light">Staff Data Scientist at Glossier</p>
-                </div>
-                <div>
-                    <img src="images/richard-feldman.png" alt="Image of Richard Feldman">
-                    <p class="partners__details-title">Richard Feldman</p>
-                    <p class="paragraph--md light">Author of <span>Elm in Action</span></p>
-                </div>
-                <div>
-                    <img src="images/phillip-troutman.png" alt="Image of Phillip Troutman">
-                    <p class="partners__details-title">Phillip Troutman</p>
-                    <p class="paragraph--md light">Senior Software Engineer at Codesmith</p>
+                <div class="about__details">
+                    <div class="about__detail">
+                        <img src="images/software-illustration.png"
+                            alt="Illustration representing open source software">
+                        <p class="paragraph--md">
+                            Open source software (OSS) is said by many to be one of the primary staples
+                            in the
+                            infrastructure of modern technology. it is what helps drive innocation,
+                            transparency, and collaboration between developers and the users of a
+                            project.
+                            Nearly all software today relies on free, public code, written and
+                            maintained by
+                            communities of developers.
+                        </p>
+                    </div>
+                    <div class="about__detail">
+                        <img src="images/contributors-illustration.png"
+                            alt="Illustration representing open source contributors">
+                        <p class="paragraph--md">Open source projects are great for those who want to
+                            improve their coding skills
+                            while at the same time contributing to project in a meaningful way that is
+                            used by
+                            many others.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="projects" class="projects">
-        <div class="project__content">
-            <span class="ruler"></span>
-            <div class="projects__header">
-                <h2>
-                    <span class="header--sm">Projects</span>
-                    <span class="header--lg">Featured OS Labs Projects</span>
+        </section>
+        <section id="sponsors" class="partners">
+            <div class="partners__content">
+                <span class="ruler light"></span>
+                <h2 class="partners__header">
+                    <span class="header--sm light">Partnerships</span>
+                    <span class="header--lg header--strong light">Partners and Sponsors</span>
                 </h2>
-            </div>
-            <p class="paragraph--md">OSLabs has produced and continues to maintain some of the most predominantly user
-                developers tools in the industry today from technology specific IDEs, prototyping
-                software, integration libraries to data visualizers, and K8 cluster orchestration
-                tools.</p>
-            <ul class="projects__list">
-                <li class="projects__item">
-                    <div class="projects__details">
-                        <h3 class="projects__title">Swell</h3>
-                        <p class="projects__subtitle">A streaming-focused API development tool</p>
-                        <p>Swell is a Streaming API development tool that enables developers to test API endpoints served over modern networking technologies including Server-Sent Events (SSE), WebSocket, and HTTP2.</p>
-                    </div>
-                    <div class="projects__preview">
-                        <a class="projects__thumbnail" href="https://github.com/open-source-labs/Swell">
-                            <img src="images/project-swell.jpg" alt="Thumbnail of React Proto Interface">
-                        </a>
-                        <div class="projects__stats">
-                            <div class="projects__stars">
-                                <img src="images/icon-star.png" alt="">
-                                <span>100+</span>
-                            </div>
-                            <a href="https://github.com/open-source-labs/Swell"
-                               class="projects__cta"
-                               title="Leave site and see React Proto project">
-                                <img src="images/icon-arrow.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="projects__item">
-                    <div class="projects__details">
-                        <h3 class="projects__title">ReacType</h3>
-                        <p class="projects__subtitle">Prototyping Tool for exporting React/Typescript Applications</p>
-                        <p>ReacType is a visual prototyping tool for developers employing React component architecture alongside the comprehensive type checking of TypeScript. In other words, you can draw prototypes and export React / Typescript code!</p>
-                    </div>
-                    <div class="projects__preview">
-                        <a class="projects__thumbnail" href="https://github.com/open-source-labs/ReacType">
-                            <img src="images/project-reactype.jpeg" alt="Thumbnail of React Proto Interface">
-                        </a>
-                        <div class="projects__stats">
-                            <div class="projects__stars">
-                                <img src="images/icon-star.png" alt="">
-                                <span>615</span>
-                            </div>
-                            <a href="https://github.com/open-source-labs/ReacType"
-                               class="projects__cta"
-                               title="Leave site and see React Proto project">
-                                <img src="images/icon-arrow.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="projects__item">
-                    <div class="projects__details">
-                        <h3 class="projects__title">Prevue</h3>
-                        <p class="projects__subtitle">All in One Prototyping tool for Vue Developers</p>
-                        <p>React Proto is a React architecture mapping tool that gives developers and
-                            designers the ability to create clean, organized, and intentional code from
-                            the beginning of the process.</p>
-                    </div>
-                    <div class="projects__preview">
-                        <a class="projects__thumbnail" href="https://github.com/open-source-labs/PreVue">
-                            <img src="images/project-prevue.jpg" alt="Thumbnail of React Proto Interface">
-                        </a>
-                        <div class="projects__stats">
-                            <div class="projects__stars">
-                                <img src="images/icon-star.png" alt="">
-                                <span>1k</span>
-                            </div>
-                            <a href="https://github.com/open-source-labs/PreVue"
-                               class="projects__cta"
-                               title="Leave site and see React Proto project">
-                                <img src="images/icon-arrow.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-</main>
-<footer id="submit">
-    <div>
+                <ul class="partners__logos">
+                    <li><img src="images/inrhythm-logo.png" alt="Partner: InRhythm Logo"></li>
+                    <li><img src="images/ripplematch-logo.png" alt="Partner: Ripplematch Logo">
+                    </li>
+                    <li><img src="images/codesmith-logo.png" alt="Partner: Codesmith Logo">
+                    </li>
 
-        <span class="ruler light"></span>
-        <div class="footer_contents">
-            <div>
-                <h2>
-                    <span class="header--sm light">About OS Labs</span>
-                    <span class="header--lg header--strong light">Submit your Request</span>
-                </h2>
-                <p class="paragraph--md secondary">At OSLabs we like to keep open communication with industry leaders. We believe this
-                    is the best way to stay up to date on cutting edge technology and where
-                    technology/tooling has room for improvement.</p>
-                <p class="paragraph--md secondary">If you have ideas on how this can technology/tooling can be improved please let us
-                    know.</p>
+                </ul>
+                <div class="partners__details">
+                    <p class="paragraph--md secondary">Our partners are leaders in their industry. They contribute to
+                        OSLabs in a multitude of ways including engineering time and the spearheading of cutting edge
+                        technologies.
+                    </p>
+                    <div>
+                        <img src="images/luis-capelo.png" alt="Image of Luis Capelo">
+                        <p class="partners__details-title">Luis Capelo</p>
+                        <p class="paragraph--md light">Staff Data Scientist at Glossier</p>
+                    </div>
+                    <div>
+                        <img src="images/richard-feldman.png" alt="Image of Richard Feldman">
+                        <p class="partners__details-title">Richard Feldman</p>
+                        <p class="paragraph--md light">Author of <span>Elm in Action</span></p>
+                    </div>
+                    <div>
+                        <img src="images/phillip-troutman.png" alt="Image of Phillip Troutman">
+                        <p class="partners__details-title">Phillip Troutman</p>
+                        <p class="paragraph--md light">Senior Software Engineer at Codesmith</p>
+                    </div>
+                </div>
             </div>
-            <form id="industryRequest">
-                <legend>Get In Touch</legend>
-                <div>
-                    <label for="name">Your name*</label>
-                    <input type="text" id="name" required>
+        </section>
+        <section id="projects" class="projects">
+            <div class="project__content">
+                <span class="ruler"></span>
+                <div class="projects__header">
+                    <h2>
+                        <span class="header--sm">Projects</span>
+                        <span class="header--lg">Featured OS Labs Projects</span>
+                    </h2>
                 </div>
+                <p class="paragraph--md">OSLabs has produced and continues to maintain some of the most predominantly
+                    user
+                    developers tools in the industry today from technology specific IDEs, prototyping
+                    software, integration libraries to data visualizers, and K8 cluster orchestration
+                    tools.</p>
+                <ul class="projects__list">
+                    <li class="projects__item">
+                        <div class="projects__details">
+                            <h3 class="projects__title">Swell</h3>
+                            <p class="projects__subtitle">A streaming-focused API development tool</p>
+                            <p>Swell is a Streaming API development tool that enables developers to test API endpoints
+                                served over modern networking technologies including Server-Sent Events (SSE),
+                                WebSocket, and HTTP2.</p>
+                        </div>
+                        <div class="projects__preview">
+                            <a class="projects__thumbnail" href="https://github.com/open-source-labs/Swell">
+                                <img src="images/project-swell.jpg" alt="Thumbnail of React Proto Interface">
+                            </a>
+                            <div class="projects__stats">
+                                <div class="projects__stars">
+                                    <img src="images/icon-star.png" alt="">
+                                    <span>100+</span>
+                                </div>
+                                <a href="https://github.com/open-source-labs/Swell" class="projects__cta"
+                                    title="Leave site and see React Proto project">
+                                    <img src="images/icon-arrow.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="projects__item">
+                        <div class="projects__details">
+                            <h3 class="projects__title">ReacType</h3>
+                            <p class="projects__subtitle">Prototyping Tool for exporting React/Typescript Applications
+                            </p>
+                            <p>ReacType is a visual prototyping tool for developers employing React component
+                                architecture alongside the comprehensive type checking of TypeScript. In other words,
+                                you can draw prototypes and export React / Typescript code!</p>
+                        </div>
+                        <div class="projects__preview">
+                            <a class="projects__thumbnail" href="https://github.com/open-source-labs/ReacType">
+                                <img src="images/project-reactype.jpeg" alt="Thumbnail of React Proto Interface">
+                            </a>
+                            <div class="projects__stats">
+                                <div class="projects__stars">
+                                    <img src="images/icon-star.png" alt="">
+                                    <span>615</span>
+                                </div>
+                                <a href="https://github.com/open-source-labs/ReacType" class="projects__cta"
+                                    title="Leave site and see React Proto project">
+                                    <img src="images/icon-arrow.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="projects__item">
+                        <div class="projects__details">
+                            <h3 class="projects__title">Prevue</h3>
+                            <p class="projects__subtitle">All in One Prototyping tool for Vue Developers</p>
+                            <p>React Proto is a React architecture mapping tool that gives developers and
+                                designers the ability to create clean, organized, and intentional code from
+                                the beginning of the process.</p>
+                        </div>
+                        <div class="projects__preview">
+                            <a class="projects__thumbnail" href="https://github.com/open-source-labs/PreVue">
+                                <img src="images/project-prevue.jpg" alt="Thumbnail of React Proto Interface">
+                            </a>
+                            <div class="projects__stats">
+                                <div class="projects__stars">
+                                    <img src="images/icon-star.png" alt="">
+                                    <span>1k</span>
+                                </div>
+                                <a href="https://github.com/open-source-labs/PreVue" class="projects__cta"
+                                    title="Leave site and see React Proto project">
+                                    <img src="images/icon-arrow.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer id="submit">
+        <div>
+
+            <span class="ruler light"></span>
+            <div class="footer_contents">
                 <div>
-                    <label for="email">Your email*</label>
-                    <input type="email" id="email" required>
+                    <h2>
+                        <span class="header--sm light">About OS Labs</span>
+                        <span class="header--lg header--strong light">Submit your Request</span>
+                    </h2>
+                    <p class="paragraph--md secondary">At OSLabs we like to keep open communication with industry
+                        leaders. We believe this
+                        is the best way to stay up to date on cutting edge technology and where
+                        technology/tooling has room for improvement.</p>
+                    <p class="paragraph--md secondary">If you have ideas on how this can technology/tooling can be
+                        improved please let us
+                        know.</p>
                 </div>
-                <div>
-                    <label for="company">Your company*</label>
-                    <input type="text" id="company" required>
-                </div>
-                <div>
-                    <label for="subject">Your subject*</label>
-                    <input type="text" id="subject" required>
-                </div>
-                <div>
-                    <label for="message">Your message*</label>
-                    <textarea name="message" id="message" cols="30" rows="5" required></textarea>
-                </div>
-                <button class="form_btn">Get in touch</button>
-            </form>
+                <form id="industryRequest">
+                    <legend>Get In Touch</legend>
+                    <div>
+                        <label for="name">Your name*</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Your email*</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="company">Your company*</label>
+                        <input type="text" id="company" required>
+                    </div>
+                    <div>
+                        <label for="subject">Your subject*</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div>
+                        <label for="message">Your message*</label>
+                        <textarea name="message" id="message" cols="30" rows="5" required></textarea>
+                    </div>
+                    <button class="form_btn">Get in touch</button>
+                </form>
+            </div>
         </div>
-    </div>
-</footer>
-<script src="bundle.js"></script>
+    </footer>
+    <script src="bundle.js"></script>
 </body>
+
 </html>
