@@ -2,7 +2,7 @@ import form from './form/index';
 import drawCanvas from './hero-bg';
 
 // entry point for scss code
-import Css from '../styles/scss/styles.scss';
+// import Css from '../styles/scss/styles.scss';
 
 const Form = new form(
   document.querySelector('#industryRequest'),
