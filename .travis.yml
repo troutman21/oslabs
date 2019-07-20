@@ -7,6 +7,8 @@ install:
   - pip install --user awscli
 before_deploy: npm run build:prod
 deploy:
+  on:
+    branch: master
   provider: s3
   access_key_id: $AWS_ACCESS_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
@@ -14,8 +16,6 @@ deploy:
   local_dir: src
   # After your tests ran and before the deploy, Travis CI will clean up any additional files and changes you made. Maybe that is not what you want, as you might generate some artifacts (think asset compilation) that are supposed to be deployed, too. There is now an option to skip the clean up:
   skip_cleanup: true
-  on:
-    branch: master
 after_deploy:
   # Allow `awscli` to make requests to CloudFront.
   - aws configure set preview.cloudfront true
