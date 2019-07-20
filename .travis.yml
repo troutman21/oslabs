@@ -5,6 +5,7 @@ install:
   # Install any dependencies required for building your site here.
   # `awscli` is required for invalidation of CloudFront distributions.
   - pip install --user awscli
+before_deploy: npm run build:prod
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_ID
