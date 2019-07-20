@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:dev": "npx node-sass src/styles/scss/styles.scss src/styles.css && npx rollup --watch  --config rollup.config.js",
+
     "build-sass": "npx node-sass src/styles/scss/styles.scss > src/styles.css",
-    "build-js": "npx rollup --watch  --config rollup.config.js",
+    "build-js": "npx rollup --config rollup.config.js",
+    "build:prod": "npm run build-sass && npm run build-js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Malika Butler",
