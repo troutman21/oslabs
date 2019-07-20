@@ -1,23 +1,32 @@
 import form from './form/index';
 import drawCanvas from './hero-bg';
 
-const Form = new form(document.querySelector('#industryRequest'), (e, fields) => {
-  let formData = {
-    subject: 'OsLabs Contact Submission',
-  };
+// entry point for scss code
+// import Css from '../styles/scss/styles.scss';
 
-  let mailToLink = `mailto:phillip@codesmith.io?subject=${formData.subject}&body=${fields.reduce((acc, input)=> {
-    const subject = input.getElementsByTagName('label')[0].textContent;
-    const value = !input.getElementsByTagName('textarea').length > 0 ? 
-      input.getElementsByTagName('input')[0].value 
-      : input.getElementsByTagName('textarea')[0].value;
+const Form = new form(
+  document.querySelector('#industryRequest'),
+  (e, fields) => {
+    const formData = {
+      subject: 'OsLabs Contact Submission',
+    };
 
-    acc += `%0A${subject}:%20${value}%0A`;
+    const mailToLink = `mailto:phillip@codesmith.io?subject=${
+      formData.subject
+    }&body=${fields.reduce((acc, input) => {
+      const subject = input.getElementsByTagName('label')[0].textContent;
+      const value =
+        !input.getElementsByTagName('textarea').length > 0
+          ? input.getElementsByTagName('input')[0].value
+          : input.getElementsByTagName('textarea')[0].value;
 
-    return acc;
-  }, '')}`;
+      acc += `%0A${subject}:%20${value}%0A`;
 
-  window.location.href = mailToLink;
-});
+      return acc;
+    }, '')}`;
+
+    window.location.href = mailToLink;
+  }
+);
 
 drawCanvas();

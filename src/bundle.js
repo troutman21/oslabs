@@ -15,14 +15,14 @@ function style(mountNode) {
         grid-column-gap: 3rem;
         grid-row-gap: 1.75rem;
       }
-      
+
       @media screen and (max-width: 67rem) {
         #${this.mountNodeId} {
           display: block;
           padding: 1.25rem 1.25rem 5rem;
         }
       }
-      
+
       #${this.mountNodeId} legend {
           position: absolute;
           opacity: 0;
@@ -30,21 +30,21 @@ function style(mountNode) {
           width: 0;
           left: -99289px;
         }
-    
-    
+
+
        #${this.mountNodeId} .form_input,
        #${this.mountNodeId} .form_message {
            display: flex;
            flex-direction: column;
        }
-       
+
        @media screen and (max-width: 67rem) {
         .form_input + .form_input,
         .form_input + .form_message {
           margin-top: 1.875rem;
         }
       }
-       
+
        #${this.mountNodeId} .form_input > label,
        #${this.mountNodeId} .form_message > label {
            margin-bottom: 0.625rem;
@@ -53,29 +53,29 @@ function style(mountNode) {
            font-weight: 700;
            color: #ffffff;
        }
-    
+
        #${this.mountNodeId} .form_input > input,
        #${this.mountNodeId} .form_message > textarea {
            background-color: transparent;
            color: #ffffff;
            font-size: 0.9375rem;
        }
-    
+
         #${this.mountNodeId} .form_input > input {
             border: none;
             border-bottom: 2px solid #ffffff;
         }
-    
+
         #${this.mountNodeId} .form_message {
             grid-column-start: 1;
             grid-column-end: 3;
             margin-bottom: 2.5rem;
         }
-        
+
         #${this.mountNodeId} .form_message > textarea {
             border: 2px solid #ffffff;
         }
-    
+
         #${this.mountNodeId} .form_btn {
             position: absolute;
             left: 50%;
@@ -83,9 +83,9 @@ function style(mountNode) {
             transform: translateX(-50%);
             font-weight: 600;
             padding: 0.6875rem 0.625rem 0.75rem;
-            
+
         }
-        
+
         #${this.mountNodeId} .form_btn:hover:disabled,
         #${this.mountNodeId} .form_btn:focus:disabled {
           pointer-events: none;
@@ -479,23 +479,32 @@ function debounce(fn, time) {
   }
 }
 
-const Form$1 = new Form(document.querySelector('#industryRequest'), (e, fields) => {
-  let formData = {
-    subject: 'OsLabs Contact Submission',
-  };
+// entry point for scss code
+// import Css from '../styles/scss/styles.scss';
 
-  let mailToLink = `mailto:phillip@codesmith.io?subject=${formData.subject}&body=${fields.reduce((acc, input)=> {
-    const subject = input.getElementsByTagName('label')[0].textContent;
-    const value = !input.getElementsByTagName('textarea').length > 0 ? 
-      input.getElementsByTagName('input')[0].value 
-      : input.getElementsByTagName('textarea')[0].value;
+const Form$1 = new Form(
+  document.querySelector('#industryRequest'),
+  (e, fields) => {
+    const formData = {
+      subject: 'OsLabs Contact Submission',
+    };
 
-    acc += `%0A${subject}:%20${value}%0A`;
+    const mailToLink = `mailto:phillip@codesmith.io?subject=${
+      formData.subject
+    }&body=${fields.reduce((acc, input) => {
+      const subject = input.getElementsByTagName('label')[0].textContent;
+      const value =
+        !input.getElementsByTagName('textarea').length > 0
+          ? input.getElementsByTagName('input')[0].value
+          : input.getElementsByTagName('textarea')[0].value;
 
-    return acc;
-  }, '')}`;
+      acc += `%0A${subject}:%20${value}%0A`;
 
-  window.location.href = mailToLink;
-});
+      return acc;
+    }, '')}`;
+
+    window.location.href = mailToLink;
+  }
+);
 
 drawCanvas();

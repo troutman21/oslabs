@@ -1,5 +1,5 @@
 # Instructions for Viewing:
-Run `yarn build-sass` then `yarn build-js`
+Run `npm run build:prod` then open index.js in src file
 
 # Dependencies
 1. Sass (https://sass-lang.com/)

@@ -5,13 +5,25 @@
   "main": "index.js",
   "scripts": {
     "build-sass": "npx node-sass src/styles/scss/styles.scss > src/styles.css",
-    "build-js": "npx rollup --watch  --config rollup.config.js",
+    "build-js": "npx rollup --config rollup.config.js",
+    "build:prod": "npm run build-sass && npm run build-js",
+    "not-finihsed-webpack-build:prod": "webpack --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Malika Butler",
   "license": "ISC",
   "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
-    "rollup": "^1.15.5"
+    "rollup": "^1.15.5",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6",
+    "url-loader": "^2.1.0"
   }
 }
