@@ -7,10 +7,6 @@ install:
   - pip install --user awscli
 before_deploy:
   - npm run build:prod
-  - aws configure set aws_access_key_id $AWS_ACCESS_ID
-  - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-  - aws configure set preview.cloudfront true
-  - echo "aws config finished!!!"
 deploy:
   on:
     branch: master
@@ -23,5 +19,9 @@ deploy:
   skip_cleanup: true
 after_deploy:
   # Allow `awscli` to make requests to CloudFront.
+  - aws configure set aws_access_key_id $AWS_ACCESS_ID
+  - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+  - aws configure set preview.cloudfront true
+  - echo "aws config finished!!!"
   # Invalidate every object in the targeted distribution. So that CF locations have to update the assets that create this website... I think
   - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DIST_ID --paths "/*"
