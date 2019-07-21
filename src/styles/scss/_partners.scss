@@ -44,7 +44,8 @@
 
 .partners__details {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between; <--- comment this in when other partners are added back into the markup
+    justify-content: center;
     margin-top: rem-calc(70);
     color: $sun;
 
@@ -57,7 +58,9 @@
         position: relative;
         display: inline-block;
         margin-right: rem-calc(40);
-        flex: 0 0 rem-calc(224);
+        text-align: center;
+        // flex: 0 0 rem-calc(224); <--- comment this in when other partners are added back into the markup
+        flex: 0 0 80%;
         line-height: 1.5;
 
         &::before {
@@ -172,7 +175,6 @@
         }
     }
 }
-
 
 .partners__logos {
     @media screen and (max-width: rem-calc(1072)) {

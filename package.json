@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build-sass:dev": "node-sass src/styles/scss/styles.scss src/styles.css -w ",
     "build-sass": "npx node-sass src/styles/scss/styles.scss > src/styles.css",
     "build-js": "npx rollup --config rollup.config.js",
     "build:prod": "npm run build-sass && npm run build-js",
