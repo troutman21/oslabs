@@ -21,3 +21,4 @@ after_deploy:
   - aws configure set preview.cloudfront true
   # Invalidate every object in the targeted distribution. So that CF locations have to update the assets that create this website... I think
   - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DIST_ID --paths "/*"
+  
