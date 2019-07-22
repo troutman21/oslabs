@@ -7,7 +7,6 @@ class Form {
     this.submitBtn = form.getElementsByTagName('button')[0];
     this.onSubmit = onSubmit;
 
-
     const formInputContainers = form.getElementsByTagName('div');
     Array.prototype.forEach.call(formInputContainers, input => {
       if(input.getElementsByTagName('textarea').length > 0) {
