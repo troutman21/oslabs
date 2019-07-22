@@ -11,7 +11,7 @@ const Form = new form(
       subject: 'OsLabs Contact Submission',
     };
 
-    const mailToLink = `mailto:phillip@codesmith.io?subject=${
+    const mailToLink = `mailto:opensourcelabs1@gmail.com?subject=${
       formData.subject
     }&body=${fields.reduce((acc, input) => {
       const subject = input.getElementsByTagName('label')[0].textContent;

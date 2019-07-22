@@ -18,10 +18,10 @@ deploy:
   # After your tests ran and before the deploy, Travis CI will clean up any additional files and changes you made. Maybe that is not what you want, as you might generate some artifacts (think asset compilation) that are supposed to be deployed, too. There is now an option to skip the clean up:
   skip_cleanup: true
 after_deploy:
+# for some reason all the commands in the section throw an internal syntax error, but it doesn't seem to effect the build/deploy/or busting of CF caches
   # Allow `awscli` to make requests to CloudFront.
   - aws configure set aws_access_key_id $AWS_ACCESS_ID
   - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
   - aws configure set preview.cloudfront true
-  - echo "aws config finished!!!"
   # Invalidate every object in the targeted distribution. So that CF locations have to update the assets that create this website... I think
   - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DIST_ID --paths "/*"
