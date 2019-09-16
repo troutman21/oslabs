@@ -1,5 +1,5 @@
 # Instructions for Viewing:
-Run `npm run build:prod` then open index.js in src file
+Run `npm run build:prod` then open index.html in src file
 
 # Dependencies
 1. Sass (https://sass-lang.com/)
