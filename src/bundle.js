@@ -106,7 +106,6 @@ class Form {
     this.submitBtn = form.getElementsByTagName('button')[0];
     this.onSubmit = onSubmit;
 
-
     const formInputContainers = form.getElementsByTagName('div');
     Array.prototype.forEach.call(formInputContainers, input => {
       if(input.getElementsByTagName('textarea').length > 0) {
@@ -489,7 +488,7 @@ const Form$1 = new Form(
       subject: 'OsLabs Contact Submission',
     };
 
-    const mailToLink = `mailto:phillip@codesmith.io?subject=${
+    const mailToLink = `mailto:opensourcelabs1@gmail.com?subject=${
       formData.subject
     }&body=${fields.reduce((acc, input) => {
       const subject = input.getElementsByTagName('label')[0].textContent;
