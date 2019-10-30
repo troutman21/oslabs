@@ -44,23 +44,24 @@
 
 .partners__details {
     display: flex;
-    // justify-content: space-between; <--- comment this in when other partners are added back into the markup
-    justify-content: center;
+    justify-content: space-between; //<--- comment this in when other partners are added back into the markup
     margin-top: rem-calc(70);
     color: $sun;
 
     img {
         width: 100%;
         max-width: rem-calc(173);
+        border-radius: 50%;
     }
+
+
 
     > p {
         position: relative;
         display: inline-block;
         margin-right: rem-calc(40);
         text-align: center;
-        // flex: 0 0 rem-calc(224); <--- comment this in when other partners are added back into the markup
-        flex: 0 0 80%;
+         flex: 0 0 rem-calc(224); //<--- comment this in when other partners are added back into the markup
         line-height: 1.5;
 
         &::before {
