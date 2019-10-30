@@ -378,18 +378,19 @@ body {
 
 .partners__details {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 4.375rem;
   color: #F9AC48; }
   .partners__details img {
     width: 100%;
-    max-width: 10.8125rem; }
+    max-width: 10.8125rem;
+    border-radius: 50%; }
   .partners__details > p {
     position: relative;
     display: inline-block;
     margin-right: 2.5rem;
     text-align: center;
-    flex: 0 0 80%;
+    flex: 0 0 14rem;
     line-height: 1.5; }
     .partners__details > p::before {
       content: '';
